@@ -27,7 +27,7 @@ public class M11 {
             }
         }
 
-        System.out.println("\n--- Grupo Masculino ---");
+        System.out.println("\n*** Grupo Masculino ***");
         if (!masculino.isEmpty()) {
             for (String nome : masculino) {
                 System.out.println(nome);
@@ -36,7 +36,7 @@ public class M11 {
             System.out.println("Nenhum nome masculino registrado.");
         }
 
-        System.out.println("\n--- Grupo Feminino ---");
+        System.out.println("\n*** Grupo Feminino ***");
         if (!feminino.isEmpty()) {
             for (String nome : feminino) {
                 System.out.println(nome);
@@ -44,19 +44,7 @@ public class M11 {
         } else {
             System.out.println("Nenhum nome feminino registrado.");
 
-
-    }
-
-//    private static void listaNomesOrdemAlfabetica() {
-//        System.out.println("****ListaOrdemAlfabética****");
-//        List<String> lista = new ArrayList<>();
-//        lista.add("Fabrício");
-//        lista.add("Leonardo");
-//        lista.add("Gustavo");
-//        lista.add("Felipe");
-//        Collections.sort(lista);
-//        System.out.println(lista);
-//        System.out.println(" ");
+        }
 
     }
 }
