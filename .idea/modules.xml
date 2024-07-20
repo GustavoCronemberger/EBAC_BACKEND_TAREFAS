@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/EBAC_BACKEND_TAREFAS.iml" filepath="$PROJECT_DIR$/.idea/EBAC_BACKEND_TAREFAS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mod13_Exercicio/Mod13_Exercicio.iml" filepath="$PROJECT_DIR$/Mod13_Exercicio/Mod13_Exercicio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mod11-Colecoes1/mod11-Colecoes1.iml" filepath="$PROJECT_DIR$/mod11-Colecoes1/mod11-Colecoes1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mod12-Colecoes2/mod12-Colecoes2.iml" filepath="$PROJECT_DIR$/mod12-Colecoes2/mod12-Colecoes2.iml" />
+    </modules>
+  </component>
+</project>
