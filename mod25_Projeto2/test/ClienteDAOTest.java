@@ -1,12 +1,9 @@
-package exVendas;
-
+import DAO.ClienteDAOMock;
+import br.com.gustavokt.exVendas.DAO.IClienteDAO;
+import br.com.gustavokt.exVendas.domain.Cliente;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import exVendas.DAO.ClienteDAOMock;
-import exVendas.DAO.IClienteDAO;
-import exVendas.domain.Cliente;
 
 public class ClienteDAOTest {
 	
@@ -22,12 +19,12 @@ public class ClienteDAOTest {
 	public void init() {
 		cliente = new Cliente();
 		cliente.setCPF(11111111111L);
-		cliente.setNome("Jailson");
-		cliente.setTel(99999999L);
-		cliente.setEnd("Cel. Miguel Satiro");
-		cliente.setNumero(30);
-		cliente.setCidade("João Pessoa");
-		cliente.setUF("PB");
+		cliente.setNome("Gustavo");
+		cliente.setTel(65544333L);
+		cliente.setEnd("XX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		cliente.setNumero(10);
+		cliente.setCidade("Imperatriz");
+		cliente.setUF("MA");
 		
 		clienteDAO.cadastrar(cliente);
 	}
@@ -51,10 +48,10 @@ public class ClienteDAOTest {
 	
 	@Test
 	public void alterarCliente() {
-		cliente.setNome("Jailson Jau");
+		cliente.setNome("Gustavo Cronemberger");
 		clienteDAO.alterar(cliente);
 		
-		Assert.assertEquals("Jailson Jau", cliente.getNome());
+		Assert.assertEquals("Gustavo Cronemberger", cliente.getNome());
 	}
 
 }

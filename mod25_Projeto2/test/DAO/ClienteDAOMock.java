@@ -1,26 +1,24 @@
-package exVendas.DAO;
+package DAO;
+
+import br.com.gustavokt.exVendas.DAO.IClienteDAO;
+import br.com.gustavokt.exVendas.domain.Cliente;
 
 import java.util.Collection;
-
-import exVendas.domain.Cliente;
 
 public class ClienteDAOMock implements IClienteDAO {
 
 	@Override
 	public Boolean cadastrar(Cliente entity) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
 	@Override
 	public void excluir(Long valor) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void alterar(Cliente entity) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -33,7 +31,6 @@ public class ClienteDAOMock implements IClienteDAO {
 
 	@Override
 	public Collection<Cliente> buscarTodos() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
