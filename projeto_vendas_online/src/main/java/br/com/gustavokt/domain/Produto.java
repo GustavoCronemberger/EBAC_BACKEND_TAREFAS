@@ -1,20 +1,35 @@
 package br.com.gustavokt.domain;
 
-public class Produto {
+import anotacao.ColunaTabela;
+import anotacao.Tabela;
+import anotacao.TipoChave;
+import br.com.gustavokt.DAO.Persistente;
 
+import java.math.BigDecimal;
+import java.sql.Timestamp;
+import java.time.Instant;
+
+@Tabela("TB_PRODUTO")
+public class Produto implements Persistente {
+
+    @ColunaTabela(dbName = "id", setJavaName = "setId")
     private Long id;
 
+    @TipoChave("getCodigo")
+    @ColunaTabela(dbName = "codigo", setJavaName = "setCodigo")
     private String codigo;
 
+    @ColunaTabela(dbName = "nome", setJavaName = "setNome")
     private String nome;
 
-    public Long getId() {
-        return id;
-    }
+    @ColunaTabela(dbName = "descricao", setJavaName = "setDescricao")
+    private String descricao;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @ColunaTabela(dbName = "valor", setJavaName = "setValor")
+    private BigDecimal valor;
+
+    @ColunaTabela(dbName = "data_fabricacao", setJavaName = "setDataFabricacao")
+    private Timestamp dataFabricacao;
 
     public String getCodigo() {
         return codigo;
@@ -30,5 +45,37 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Timestamp getDataFabricacao() {
+        return dataFabricacao;
+    }
+
+    public void setDataFabricacao(Timestamp dataFabricacao) {
+        this.dataFabricacao = dataFabricacao;
     }
 }
