@@ -29,6 +29,20 @@ public class Matricula {
     @Column(name = "STATUS", nullable = false)
     private String status;
 
+    @ManyToOne
+    //Quando se faz com com 1 objeto, o final é One
+    // Uma ou mais Matrículas é possuída por um curso!
+    @JoinColumn(name = "id_curso_fk",//A coluna será chamada assim com a referencia id da tabela Curso
+            foreignKey = @ForeignKey(name = "fk_curso_matricula"), //Setando um nome para a chave estrangeira no BD, para não ser um nome automatico.
+            referencedColumnName = "id", nullable = false)
+    private Curso curso;
+
+    @OneToOne
+    @JoinColumn(name = "id_aluno_fk",
+            foreignKey = @ForeignKey(name = "fk_aluno_matricula"),
+            referencedColumnName = "id", nullable = false)
+    private Aluno aluno;
+
     public Long getId() {
         return id;
     }
@@ -67,5 +81,21 @@ public class Matricula {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(Curso curso) {
+        this.curso = curso;
+    }
+
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public void setAluno(Aluno aluno) {
+        this.aluno = aluno;
     }
 }
